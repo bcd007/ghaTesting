@@ -31,9 +31,7 @@ jobs:
       - name: Deploy to specified environment
         run: |
           echo "Deploying to ${{ github.event.inputs.environment }} environment."
-          if ${{ github.event.inputs.deploy_hotfix }}; then
-            echo "Deploying hotfix."
-          fi
+          echo "Deploying Servername: ${{ github.event.inputs.server_name }}"
           if ${{ github.event.inputs.release_version }}; then
             echo "Using Azure Region: ${{ github.event.inputs.server_region }}"
           fi
