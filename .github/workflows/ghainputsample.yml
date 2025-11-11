@@ -1,1 +1,21 @@
-
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - 'development'
+          - 'staging'
+          - 'production'
+      release_version:
+        description: 'Specify the release version'
+        required: false
+        type: string
+      deploy_hotfix:
+        description: 'Deploy a hotfix?'
+        required: false
+        default: false
+        type: boolean
