@@ -8,14 +8,19 @@ on:
         type: choice
         options:
           - 'development'
-          - 'staging'
           - 'production'
-      release_version:
-        description: 'Specify the release version'
-        required: false
+      server_name:
+        description: 'Specify the Server Name'
+        required: true
         type: string
-      deploy_hotfix:
-        description: 'Deploy a hotfix?'
-        required: false
-        default: false
-        type: boolean
+      server_region:
+        description: 'Server Region'
+        required: true
+        default: 'US East'
+        type: choice
+        options:
+          - 'US East'
+          - 'East US 2'
+          - 'Central US'
+          - 'UK South'
+          
