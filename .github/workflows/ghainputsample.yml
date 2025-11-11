@@ -32,6 +32,5 @@ jobs:
         run: |
           echo "Deploying to ${{ github.event.inputs.environment }} environment."
           echo "Deploying Servername: ${{ github.event.inputs.server_name }}"
-          if ${{ github.event.inputs.release_version }}; then
-            echo "Using Azure Region: ${{ github.event.inputs.server_region }}"
-          fi
+          echo "Deploying to Azure Region: ${{ github.event.inputs.server_region }}"
+
